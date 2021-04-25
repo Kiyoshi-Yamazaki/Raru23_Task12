@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Task12App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="firstBaseline" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="eUn-pf-Knt">
+                                <rect key="frame" x="40" y="145" width="334" height="28"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="消費税率" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lW0-jh-eqe">
+                                        <rect key="frame" x="0.0" y="0.0" width="69.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vm4-UN-B3S">
+                                        <rect key="frame" x="77.5" y="-6" width="233" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="750" constant="100" id="KZS-cm-QHh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGf-L4-UxV">
+                                        <rect key="frame" x="318.5" y="0.0" width="15.5" height="20.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="750" constant="15.5" id="jPE-6U-djS"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="firstBaseline" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="OQq-fc-rep">
+                                <rect key="frame" x="40" y="232" width="334" height="20.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="税込金額" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aIE-6z-dOB">
+                                        <rect key="frame" x="0.0" y="0.0" width="280.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oKo-pf-cYV">
+                                        <rect key="frame" x="288.5" y="0.0" width="20" height="20.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="750" constant="20" id="51u-WI-lMF"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="円" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5q8-zh-Jgg">
+                                        <rect key="frame" x="316.5" y="0.0" width="17.5" height="20.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="750" constant="17.5" id="zIq-dX-btQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QiP-Ng-hgq">
+                                <rect key="frame" x="191.5" y="183" width="31" height="30"/>
+                                <state key="normal" title="計算"/>
+                                <connections>
+                                    <action selector="tapCaluculate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kL7-qb-Q0D"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="firstBaseline" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="4Gt-gJ-rK4">
+                                <rect key="frame" x="40" y="89" width="334" height="28"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="税抜金額" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="neh-fi-gnC">
+                                        <rect key="frame" x="0.0" y="0.0" width="69.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vU2-fQ-AG9">
+                                        <rect key="frame" x="77.5" y="-6" width="231" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="750" constant="100" id="Al6-XV-KUM"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" ambiguous="YES" text="円" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZqI-6b-llO">
+                                        <rect key="frame" x="316.5" y="0.0" width="17.5" height="20.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="750" constant="17.5" id="Khx-eo-2qy"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OQq-fc-rep" secondAttribute="trailing" constant="40" id="CLZ-xP-gcR"/>
+                            <constraint firstItem="QiP-Ng-hgq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JfO-j2-c6S"/>
+                            <constraint firstItem="4Gt-gJ-rK4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="Pxy-xp-Tsn"/>
+                            <constraint firstItem="eUn-pf-Knt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UGg-zh-1RQ"/>
+                            <constraint firstItem="OQq-fc-rep" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="b98-lB-VkC"/>
+                            <constraint firstItem="4Gt-gJ-rK4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="45" id="cHb-4d-MiP"/>
+                            <constraint firstItem="eUn-pf-Knt" firstAttribute="top" secondItem="4Gt-gJ-rK4" secondAttribute="bottom" constant="28" id="cez-9B-6ky"/>
+                            <constraint firstItem="eUn-pf-Knt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="elm-HU-d5S"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4Gt-gJ-rK4" secondAttribute="trailing" constant="40" id="gPo-S0-ylJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eUn-pf-Knt" secondAttribute="trailing" constant="40" id="kHp-6v-8dg"/>
+                            <constraint firstItem="OQq-fc-rep" firstAttribute="top" secondItem="QiP-Ng-hgq" secondAttribute="bottom" constant="19" id="lva-cR-ThJ"/>
+                            <constraint firstItem="OQq-fc-rep" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="m4d-sz-Dxy"/>
+                            <constraint firstItem="4Gt-gJ-rK4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oI7-VX-yNh"/>
+                            <constraint firstItem="QiP-Ng-hgq" firstAttribute="top" secondItem="eUn-pf-Knt" secondAttribute="bottom" constant="10" id="qnJ-a7-hhd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="amountTextField" destination="vU2-fQ-AG9" id="UQl-xA-UcI"/>
+                        <outlet property="taxTextField" destination="Vm4-UN-B3S" id="osb-nE-eqV"/>
+                        <outlet property="totalLabel" destination="oKo-pf-cYV" id="chp-uL-TjT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="88.392857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
