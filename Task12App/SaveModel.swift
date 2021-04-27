@@ -7,25 +7,22 @@
 
 import Foundation
 
-class SaveModel {
+class SaveRepository {
     private let savedTax: String = "税率保存"
 
-    public func saveTax(tax: Int) {
+    func saveTax(tax: Int) {
         let userDefault = UserDefaults.standard
         userDefault.set(tax, forKey: savedTax)
     }
 
-    public func getTax() -> Int? {
+    func getTax() -> Int? {
         let userDefault = UserDefaults.standard
-        let tax = userDefault.integer(forKey: savedTax)
-        return tax
+        return userDefault.integer(forKey: savedTax)
     }
 }
 
-struct Calculator {
-    var amountExcludingTax: Int
-    var tax: Int
-    var totalAmount: Int {
+struct TotalAmountCalculator {
+    func calculate(amountExcludingTax: Int, tax: Int) -> Int {
         Int(Double(amountExcludingTax) * Double(100 + tax) / 100)
     }
 }

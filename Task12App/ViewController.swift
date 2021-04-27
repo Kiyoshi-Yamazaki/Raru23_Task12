@@ -13,33 +13,30 @@ class ViewController: UIViewController {
     @IBOutlet weak private var taxTextField: UITextField!
     @IBOutlet weak private var totalLabel: UILabel!
 
-    private let saveModel = SaveModel()
+    private let saveRepository = SaveRepository()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         amountTextField.keyboardType = .numberPad
         taxTextField.keyboardType = .numberPad
 
-        guard let tax = saveModel.getTax() else {
+        guard let tax = saveRepository.getTax() else {
             return
         }
         taxTextField.text = String(tax)
     }
 
     @IBAction private func tapCaluculate(_ sender: Any) {
-        guard let amountExcludingTax = Int(amountTextField.text ?? "") else {return}
-        guard let tax = Int(taxTextField.text ?? "") else {
-            return
-        }
+        guard let amountExcludingTax = Int(amountTextField.text ?? ""),
+              let tax = Int(taxTextField.text ?? "") else { return }
 
-        let calculator = Calculator(amountExcludingTax: amountExcludingTax, tax: tax)
-        let totalAmount = calculator.totalAmount
-        saveModel.saveTax(tax: tax)
+        let totalAmount = TotalAmountCalculator().calculate(amountExcludingTax: amountExcludingTax, tax: tax)
+
+        saveRepository.saveTax(tax: tax)
         totalLabel.text = String(totalAmount)
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
-
 }
